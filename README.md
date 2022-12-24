@@ -56,6 +56,52 @@ router.navigate({ name: 'homepage' }) // Navigate to route named 'homepage'
 router.navigate('posts/create') // Navigate to route named 'posts/create'
 ```
 
+### 注意順序
+在相同path的狀態下，有參數(ex. :id)的放後面
+ex. 正確
+```
+  {
+    group: 'father-uri',
+    path: 'son1',
+    callback: function() {
+      console.log('father-uri/son1 page')
+    },
+    name: 'fatherUri-son1'
+  },
+  {
+    group: 'father-uri',
+    path: ':id',
+    callback: function(id) {
+      console.log('father-uri PAGE');
+      console.log('參數為: ', id);
+      console.log('father-uri/:ID page')
+    },
+    name: 'fatherUri-son2'
+  },
+```
+ex. 失敗，father-uri/son1 會走到 father-uri/:id那，並認為son1為:id
+```
+  {
+    group: 'father-uri',
+    path: ':id',
+    callback: function(id) {
+      console.log('father-uri PAGE');
+      console.log('參數為: ', id);
+      console.log('father-uri/:ID page')
+    },
+    name: 'fatherUri-son2'
+  },
+  {
+    group: 'father-uri',
+    path: 'son1',
+    callback: function() {
+      console.log('father-uri/son1 page')
+    },
+    name: 'fatherUri-son1'
+  },
+```
+
+
 
 ## History vs Hash
 ex.
