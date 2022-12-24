@@ -13,7 +13,49 @@ const routes = [
     name: 'main-page'
   },
   {
-    path: '/:id',
+    group: 'group1',
+    path: 'show',
+    callback: function() {
+      console.log('group1/show');
+
+    },
+    name: 'group1-show'
+  },
+  {
+    path: 'post/3/show',
+    callback: function() {
+      console.log('post/3/show page')
+    },
+    name: 'post-3-show'
+  },
+  {
+    group: 'father-uri',
+    path: 'son1',
+    callback: function() {
+      console.log('father-uri/son1 page')
+    },
+    name: 'fatherUri-son1'
+  },
+  {
+    group: 'father-uri',
+    path: ':id',
+    callback: function(id) {
+      console.log('father-uri PAGE');
+      console.log('參數為: ', id);
+      console.log('father-uri/:ID page')
+    },
+    name: 'fatherUri-son2'
+  },
+  {
+    path: 'params-page/test',
+    callback: function() {
+      console.log('params-page-test');
+
+    },
+    name: 'params-page-test'
+  },
+  {
+    path: 'params-page/:id',
     callback: function(id) {
       self.routerInstance.params = id;
       
@@ -21,24 +63,8 @@ const routes = [
       console.log(self.routerInstance);
 
     },
-    name: 'aa'
+    name: 'params-page-id'
   },
-  {
-    group: 'group1',
-    path: 'show',
-    callback: function() {
-      console.log('group1/show');
-
-    },
-    name: 'cc'
-  },
-  {
-    path: '/post/3/show',
-    callback: function() {
-      console.log('aa page')
-    },
-    name: 'cc'
-  }
 ]
 const router = new Router({mode: 'history', routes});
 router.add('/add-new-uri/test', function () {
