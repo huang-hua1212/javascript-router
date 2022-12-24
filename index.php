@@ -14,6 +14,8 @@
 </head>
 <body>
 <div id='app'></div>
+<!-- template TESTing -->
+<template-test></template-test>
 </body>
 <script type = 'module'>
   import router from '/router/index.js';
