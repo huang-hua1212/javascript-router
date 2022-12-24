@@ -2,8 +2,17 @@ import Router from '/lib/router/index.js';
 import MainPage from '/views/mainPage/mainPage.js';
 import PostsPage from '/views/postsPage/postsPage.js';
 
-
+console.log(PostsPage);
 const routes = [
+  {
+    path: 'posts-page',
+    callback: function() {
+      console.log('posts/page');
+
+    },
+    name: 'posts-page',
+    class: PostsPage,
+  },
   {
     path: '/',
     callback: function() {
@@ -14,15 +23,6 @@ const routes = [
     },
     name: 'main-page',
     class: MainPage,
-  },
-  {
-    path: 'posts-page',
-    callback: function() {
-      console.log('posts/page');
-
-    },
-    name: 'posts-page',
-    class: PostsPage,
   },
   {
     group: 'group1',
@@ -90,7 +90,9 @@ const routes = [
   },
   
 ]
-const router = new Router({mode: 'history', routes});
+const router = new Router({mode: 'hash', routes});
+
+// const router = new Router({mode: 'history', routes});
 router.add('/add-new-uri/test', function () {
     console.log(`This is the post add-new-uri`)
 }, 'add-new-uri')
@@ -110,4 +112,5 @@ router.group('test', function () {
 })
 
 self.routerInstance = router; 
+
 export default router;
