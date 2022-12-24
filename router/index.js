@@ -5,15 +5,6 @@ import PostsPage from '/views/postsPage/postsPage.js';
 
 const routes = [
   {
-    path: 'posts-page',
-    callback: function() {
-      console.log('posts/page');
-
-    },
-    name: 'posts-page',
-    class: PostsPage,
-  },
-  {
     path: '/',
     callback: function() {
       console.log('main page');
@@ -25,15 +16,13 @@ const routes = [
     class: MainPage,
   },
   {
-    path: '/:id',
-    callback: function(id) {
-      self.routerInstance.params = id;
-      
-      console.log('參數為:', id);
-      console.log(self.routerInstance);
+    path: 'posts-page',
+    callback: function() {
+      console.log('posts/page');
 
     },
-    name: 'aa'
+    name: 'posts-page',
+    class: PostsPage,
   },
   {
     group: 'group1',
@@ -50,6 +39,54 @@ const routes = [
       console.log('aa page')
     },
     name: 'cc'
+  },
+  {
+    group: 'father-uri',
+    path: 'son1',
+    callback: function() {
+      console.log('father-uri/son1 page')
+    },
+    name: 'fatherUri-son1'
+  },
+  {
+    group: 'father-uri',
+    path: ':id',
+    callback: function(id) {
+      console.log('father-uri PAGE');
+      console.log('參數為: ', id);
+      console.log('father-uri/:ID page')
+    },
+    name: 'fatherUri-son2'
+  },
+  {
+    path: 'params-page/test',
+    callback: function() {
+      console.log('params-page-test');
+
+    },
+    name: 'params-page-test'
+  },
+  {
+    path: 'params-page/:id',
+    callback: function(id) {
+      self.routerInstance.params = id;
+      
+      console.log('參數為:', id);
+      console.log(self.routerInstance);
+
+    },
+    name: 'params-page-id'
+  },
+  {
+    path: '/:id',
+    callback: function(id) {
+      self.routerInstance.params = id;
+      
+      console.log('參數為:', id);
+      console.log(self.routerInstance);
+
+    },
+    name: 'aa'
   },
   
 ]
