@@ -5,10 +5,10 @@ ajax.open("GET", `/views/mainPage/mainPage.html`, false);
 ajax.send();
 // template.innerHTML += ajax.responseText;
 
-class MainPage extends HTMLElement {
+class MainPage {
     
     constructor() {
-        super();
+        // super();
         // console.log(template);
         // this.template = template;
         this.template = ajax.responseText;
@@ -16,10 +16,13 @@ class MainPage extends HTMLElement {
         // this.render = this.render.bind(this);
         // this.render();
     }
-    connectedCallback() {
-        this.innerHTML= this.template;
-        // this.innerHTML= this.render();
+    getTemplate(){
+        return this.template;
     }
+    // connectedCallback() {
+    //     this.innerHTML= this.template;
+    //     // this.innerHTML= this.render();
+    // }
     // render() {
     //     this.innerHTML = this.template;
     // }

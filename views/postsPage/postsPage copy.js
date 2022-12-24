@@ -5,9 +5,10 @@ ajax.open("GET", `/views/postsPage/postsPage.html`, false);
 ajax.send();
 // template.innerHTML += ajax.responseText;
 
-class PostsPage {
+class PostsPage extends HTMLElement {
     
     constructor() {
+        super();
         // console.log(template);
         // this.template = template;
         this.template = ajax.responseText;

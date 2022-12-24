@@ -2,7 +2,6 @@ import Router from '/lib/router/index.js';
 import MainPage from '/views/mainPage/mainPage.js';
 import PostsPage from '/views/postsPage/postsPage.js';
 
-console.log(PostsPage);
 const routes = [
   {
     path: 'posts-page',
