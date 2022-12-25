@@ -1,5 +1,7 @@
 # 純 JS寫 Router
-參考自: [huang-hua1212/jsRouter](https://github.com/huang-hua1212/jsRouter)
+參考自: 
+* [huang-hua1212/jsRouter](https://github.com/huang-hua1212/jsRouter)
+* [betaWeb/Router](https://github.com/betaWeb/Router)
 
 # Router
 A Simple JavaScript history-based router class
