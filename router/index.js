@@ -89,8 +89,8 @@ const routes = [
   },
   
 ]
-// const router = new Router({mode: 'hash', routes});
-const router = new Router({mode: 'history', routes});
+const router = new Router({mode: 'hash', routes});
+// const router = new Router({mode: 'history', routes});
 
 router.add('/add-new-uri/test', function () {
     console.log(`This is the post add-new-uri`)
