@@ -13,17 +13,11 @@ class PostsPage {
     }
     init() {
         $('#first').on('click', function() {
-            console.log(123);
+            console.log('postsPage.js click success!!!!!!');
         })
-        // document.getElementById("first").addEventListener("click", function(){
-        //     console.log("Hello World");
-        // });
     }
     
 }
 
-
-
-// const PostsPage
 
 export default PostsPage;

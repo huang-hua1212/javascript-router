@@ -18,8 +18,6 @@
 <template-test></template-test>
 </body>
 <script type = 'module'>
-  // import router from '/router/index.js';
-  // import PostsPage from '/views/postsPage/postsPage.js';
   import RoutingRouter from '/routing-render.js';
 
   window.customElements.define('template-test', RoutingRouter);
