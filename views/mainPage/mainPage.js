@@ -13,9 +13,10 @@ class MainPage {
         return this.template;
     }
     init() {
-       
         $('#next').on('click', (e) => {
+            console.log('main page click success!!!');
             window.routerInstance.navigate({ name: 'posts-page' })
+            // window.routerInstance.navigate('posts-page');
         })
     }
 }

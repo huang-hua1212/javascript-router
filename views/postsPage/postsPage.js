@@ -12,9 +12,11 @@ class PostsPage {
         return this.template;
     }
     init() {
-        $('#first').on('click', function() {
+        $('#first').on('click', (e) => {
             console.log('postsPage.js click success!!!!!!');
+            window.routerInstance.navigate({ name: 'main' })
         })
+        
     }
     
 }
