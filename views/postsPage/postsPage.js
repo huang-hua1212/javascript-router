@@ -3,26 +3,27 @@
 var ajax = new XMLHttpRequest();
 ajax.open("GET", `/views/postsPage/postsPage.html`, false);
 ajax.send();
-// template.innerHTML += ajax.responseText;
 
 class PostsPage {
-    
     constructor() {
-        // console.log(template);
-        // this.template = template;
         this.template = ajax.responseText;
-        // console.log(this.template);
-        // this.render = this.render.bind(this);
-        // this.render();
     }
     getTemplate(){
         return this.template;
     }
-    // connectedCallback() {
-    //     // this.innerHTML= this.template;
-    //     // this.innerHTML= this.render();
-    // }
+    init() {
+        $('#first').on('click', function() {
+            console.log(123);
+        })
+        // document.getElementById("first").addEventListener("click", function(){
+        //     console.log("Hello World");
+        // });
+    }
+    
 }
 
+
+
+// const PostsPage
 
 export default PostsPage;

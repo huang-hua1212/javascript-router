@@ -8,36 +8,35 @@ ajax.send();
 class MainPage {
     
     constructor() {
-        // super();
-        // console.log(template);
-        // this.template = template;
         this.template = ajax.responseText;
-        // console.log(this.template);
-        // this.render = this.render.bind(this);
-        // this.render();
     }
     getTemplate(){
         return this.template;
     }
-    // connectedCallback() {
-    //     this.innerHTML= this.template;
-    //     // this.innerHTML= this.render();
-    // }
-    // render() {
-    //     this.innerHTML = this.template;
-    // }
-    render(){
-        const rootArticle = document.createElement('article');
-        rootArticle.innerHTML= `
-            <input type="checkbox" name="check" />
-            <h1 class='item-title'>今天晚上公司聚餐</h1>
-            <div class='item-tags'>
-                <span class=='item-tag'>吃飯</span>
-                <span class=='item-tag'>公司</span>
-            </div>
-            <p class='item-descption'>吃到飽餐廳吃飯</p>
-        `
-        return rootArticle;
+    init() {
+        // $('#first').on('click', function() {
+        //     console.log(123);
+        // })
+        // document.getElementById("first").addEventListener("click", function(){
+        //     console.log("Hello World");
+        // });
+        $('#next').on('click', (e) => {
+            console.log(window.routerInstance);
+            console.log(window.history);
+            // window.history.forward(1);
+            // // window.routerInstance.back();
+            // window.history.pushState({},'','posts-page')  //修改浏览器中显示的url地址
+            // // console.log(window.onpopstate);
+            window.routerInstance.navigate({ name: 'posts-page' })
+        })
+
+        // $('#a-click').on('click', () =>{
+        //     e.preventDefault()
+        //     let path = e.target.getAttribute('href')  //获取超链接的href，改为pushState跳转，不刷新页面
+        //     console.log(path);
+        //     // window.history.pushState({},'',path)  //修改浏览器中显示的url地址
+        // })
+       
     }
 }
 
