@@ -28,7 +28,7 @@ import Router from '/lib/router/index.js';
 import router from '/router/index.js';
 ```
 
-#### You only change index.js file
+### You only change index.js file
 After, you just have to instanciate a new Router, and declare routes as follow :
 ```javascript
 const router = new Router({ mode: 'hash' })
