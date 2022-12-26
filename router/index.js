@@ -1,4 +1,4 @@
-import Router from '/lib/router/index.js';
+import Router from '/lib/router/hash-routing.js';
 import MainPage from '/views/mainPage/mainPage.js';
 import PostsPage from '/views/postsPage/postsPage.js';
 

@@ -1,5 +1,9 @@
 # 純 JS寫 Router
 
+## Structure
+/router/index.js引入 /lib/router/hash-routing.js
+/lib/router/history-routing.js引入 /lib/router/hash-routing.js
+
 
 # Router
 A Simple JavaScript history-based router class
@@ -13,14 +17,18 @@ or
 
 index.php
 ```javascript
-import router from '/router/index.js';
+import RoutingRouter from '/lib/router/history-routing.js';
 ```
 /router/index.js
 ```javascript
 import Router from '/lib/router/index.js';
 ```
+/lib/router/history-routing.js
+```javascript
+import router from '/router/index.js';
+```
 
-
+#### You only change index.js file
 After, you just have to instanciate a new Router, and declare routes as follow :
 ```javascript
 const router = new Router({ mode: 'hash' })
