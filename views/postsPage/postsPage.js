@@ -1,7 +1,7 @@
 
 
 var ajax = new XMLHttpRequest();
-ajax.open("GET", `/views/postsPage/postsPage.html`, false);
+ajax.open("GET", `./views/postsPage/postsPage.html`, false);
 ajax.send();
 
 class PostsPage {

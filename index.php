@@ -18,8 +18,9 @@
 <template-test></template-test>
 </body>
 <script type = 'module'>
-  import RoutingRouter from '/lib/router/history-routing.js';
-
+  // import RoutingRouter from '../lib/router/history-routing.js';
+  import RoutingRouter from './lib/router/history-routing.js';
+  
   window.customElements.define('template-test', RoutingRouter);
 
 </script>
