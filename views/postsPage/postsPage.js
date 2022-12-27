@@ -9,7 +9,14 @@ class PostsPage {
         this.template = ajax.responseText;
     }
     getTemplate(){
-        return this.template;
+        return Object.getOwnPropertyNames(this);
+    }
+    get template() {
+        return  this._template;
+    }
+  
+    set template(c) {
+        this._template = ajax.responseText;
     }
     init() {
         $('#first').on('click', (e) => {
