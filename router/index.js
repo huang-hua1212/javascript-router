@@ -99,7 +99,7 @@ const routes = [
   // },
   
 ]
-const router = new Router({mode: 'hash', routes, root: 'MAMP/projects/js-router/index.php/'});
+const router = new Router({mode: 'hash', routes, root: '/MAMP/projects/js-router/index.php'});
 // const router = new Router({mode: 'history', routes});
 
 // router.add('/add-new-uri/test', function () {
